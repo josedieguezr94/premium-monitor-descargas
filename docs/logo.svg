@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1024 1024">
+  <!-- Red hexagon (PremiumHosting.cl) with a white gauge -->
+  <polygon points="276,72 748,72 984,512 748,952 276,952 40,512" fill="#d0382a"/>
+  <polygon points="276,72 748,72 984,512 748,952 276,952 40,512" fill="none" stroke="#b02c20" stroke-width="16"/>
+  <path d="M 262 660 A 262 262 0 1 1 762 660" fill="none" stroke="#ffffff" stroke-width="76" stroke-linecap="round"/>
+  <line x1="512" y1="600" x2="650" y2="430" stroke="#ffffff" stroke-width="64" stroke-linecap="round"/>
+  <circle cx="512" cy="600" r="60" fill="#ffffff"/>
+</svg>

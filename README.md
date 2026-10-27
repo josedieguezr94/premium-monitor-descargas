@@ -57,6 +57,26 @@ Entra a la **[última versión](../../releases/latest)** y elige:
   </tr>
 </table>
 
+## Fluidez: microcortes y tirones
+
+Cuando el cursor o el teclado llegan entrecortados y todo «arrastra», el Administrador de tareas suele mostrar el equipo sano. La pestaña **Fluidez** encuentra la causa sin tener que abrir LatencyMon ni otras herramientas:
+
+- **Graba los últimos 10 minutos**, segundo a segundo, para que el problema no se haya ido cuando lo vas a revisar. Está apagada hasta que la activas y consume muy poco (alrededor del 0,05 % del procesador).
+- **Capturar incidente** congela esos 10 minutos y te dice en palabras simples **qué pasa y qué hacer**: falta de memoria, Windows yendo al disco, un driver con pausas largas o un disco lento.
+- **Línea base**: guarda cómo anda el equipo cuando está bien, para comparar cada captura con tu propio equipo.
+- **Tiempo por driver**, como LatencyMon, con el nombre del dispositivo y un aviso cuando el driver solo es un intermediario.
+- **Vigilar en segundo plano**: si algo dura más de 30 segundos, guarda una captura automática y te avisa.
+- **Exportar reporte** para pegarlo en un chat o enviarlo a soporte.
+
+<table>
+  <tr>
+    <td width="50%"><img src="docs/fluidez.png" alt="Fluidez grabando: memoria, drivers, disco y energía en vivo"></td>
+    <td width="50%"><img src="docs/fluidez-captura.png" alt="Captura de un incidente con veredicto, comparación con la línea base y tiempo por driver"></td>
+  </tr>
+</table>
+
+El tiempo por driver necesita un permiso de administrador: **Capturar con drivers** lo pide una vez y mide durante un minuto. Todo lo demás funciona sin permisos. A diferencia de LatencyMon, no instala un driver propio, así que no mide su «latencia de interrupción a proceso».
+
 ## Temperatura exacta del procesador (opcional)
 
 Por defecto PremiumMonitor muestra la temperatura de la tarjeta gráfica y una temperatura **aproximada** del equipo, sin pedir permisos.

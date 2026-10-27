@@ -6,7 +6,7 @@
 
 <p align="center">
   <b>Monitor de hardware para Windows, simple y en español.</b><br>
-  Lo útil de HWMonitor y CPU-Z, sin cientos de sensores que nadie entiende.
+  Lo útil de HWMonitor, CPU-Z y LatencyMon, sin cientos de sensores que nadie entiende.
 </p>
 
 <p align="center">
@@ -39,6 +39,8 @@ Entra a la **[última versión](../../releases/latest)** y elige:
 - **Resumen de un vistazo**: medidores de procesador, temperatura, memoria, gráficos y batería, más los programas que más consumen.
 - **Vista detallada** de cada recurso, con gráfico, datos y qué programa lo está usando.
 - **Batería en serio**: consumo en **vatios**, tiempo restante, **salud** y ciclos de carga.
+- **Fluidez** (nuevo en 0.2.0): encuentra la causa de microcortes y tirones, incluido el driver culpable, y **reemplaza a LatencyMon**. Ver [más abajo](#fluidez-microcortes-y-tirones).
+- **Memoria reservada para hardware** a la vista: por qué un equipo con 32 GB muestra 24 en Windows.
 - **Avisos en lenguaje simple**: RAM casi llena, poco espacio, batería que se descarga rápido o equipo muy caliente.
 - **Mi equipo**: especificaciones del PC y un botón para copiarlas y enviarlas a soporte.
 - **Mini widget** siempre visible y acceso desde la **bandeja del sistema**.

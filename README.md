@@ -6,7 +6,7 @@
 
 <p align="center">
   <b>Monitor de hardware para Windows, simple y en español.</b><br>
-  Lo útil de HWMonitor, CPU-Z y LatencyMon, sin cientos de sensores que nadie entiende.
+  Lo útil de HWMonitor, CPU-Z, LatencyMon y WhySoSlow, sin cientos de sensores que nadie entiende.
 </p>
 
 <p align="center">
@@ -39,12 +39,13 @@ Entra a la **[última versión](../../releases/latest)** y elige:
 - **Resumen de un vistazo**: medidores de procesador, temperatura, memoria, gráficos y batería, más los programas que más consumen.
 - **Vista detallada** de cada recurso, con gráfico, datos y qué programa lo está usando.
 - **Batería en serio**: consumo en **vatios**, tiempo restante, **salud** y ciclos de carga.
-- **Fluidez** (nuevo en 0.2.0): encuentra la causa de microcortes y tirones, incluido el driver culpable, y **reemplaza a LatencyMon**. Ver [más abajo](#fluidez-microcortes-y-tirones).
+- **Fluidez**: encuentra la causa de microcortes y tirones, incluido el driver culpable y, desde 0.3.0, **la pantalla**. **Reemplaza a LatencyMon y WhySoSlow**. Ver [más abajo](#fluidez-microcortes-y-tirones).
+- **Energía** (nuevo en 0.3.0): cuánto consume cada programa, minutos de batería que ganas cerrándolo, historia de los últimos días y aviso si el equipo gasta más de lo normal en reposo. Ver [más abajo](#energía-qué-se-lleva-la-batería).
 - **Memoria reservada para hardware** a la vista: por qué un equipo con 32 GB muestra 24 en Windows.
 - **Avisos en lenguaje simple**: RAM casi llena, poco espacio, batería que se descarga rápido o equipo muy caliente.
 - **Mi equipo**: especificaciones del PC y un botón para copiarlas y enviarlas a soporte.
 - **Mini widget** siempre visible y acceso desde la **bandeja del sistema**.
-- **Consumo mínimo**: menos del 0,5 % del procesador.
+- **Consumo mínimo**: menos del 0,5 % del procesador, y casi nada de memoria cuando está en la bandeja.
 
 <table>
   <tr>
@@ -65,6 +66,7 @@ Cuando el cursor o el teclado llegan entrecortados y todo «arrastra», el Admin
 - **Capturar incidente** congela esos 10 minutos y te dice en palabras simples **qué pasa y qué hacer**: falta de memoria, Windows yendo al disco, un driver con pausas largas o un disco lento.
 - **Línea base**: guarda cómo anda el equipo cuando está bien, para comparar cada captura con tu propio equipo.
 - **Tiempo por driver**, como LatencyMon, con el nombre del dispositivo y un aviso cuando el driver solo es un intermediario.
+- **Pantalla** (nuevo en 0.3.0): frecuencia, HDR, el rango de FreeSync de tu monitor y la antigüedad del driver de video. **Probar pantalla** mide en 5 segundos si el escritorio dibuja con fluidez; si dibuja por debajo del rango de tu pantalla, te dice qué cambiar. Es una causa de microcortes al escribir y mover el mouse que ninguna otra herramienta muestra.
 - **Vigilar en segundo plano**: si algo dura más de 30 segundos, guarda una captura automática y te avisa.
 - **Exportar reporte** para pegarlo en un chat o enviarlo a soporte.
 
@@ -76,6 +78,19 @@ Cuando el cursor o el teclado llegan entrecortados y todo «arrastra», el Admin
 </table>
 
 El tiempo por driver necesita un permiso de administrador: **Capturar con drivers** lo pide una vez y mide durante un minuto. Todo lo demás funciona sin permisos. A diferencia de LatencyMon, no instala un driver propio, así que no mide su «latencia de interrupción a proceso».
+
+## Energía: qué se lleva la batería
+
+Windows ordena las apps por «Alto, Medio, Bajo», sin números. La pestaña **Energía** te da vatios y deja claro qué es medido y qué es estimado:
+
+- **Consumo total** de la batería y del procesador, **medidos**. La diferencia es la **pantalla y el resto del equipo**, que suele ser lo que más gasta.
+- **Consumo de cada programa**, **estimado** según su uso de procesador y gráfica, y **cuántos minutos de batería ganas** si lo cierras.
+- **Historia**: qué gastó más hoy, ayer y en la semana, y qué estaba abierto cuando el consumo subió.
+- **Aviso de reposo**: la app aprende cuánto gasta tu equipo sin hacer nada y te avisa si sube un 40 % o más, una señal temprana de que algo anda mal.
+
+<p align="center">
+  <img src="docs/energia.png" alt="Pestaña Energía con consumo medido, estimado por programa, tiempo restante, reposo de referencia e historia" width="900">
+</p>
 
 ## Temperatura exacta del procesador (opcional)
 
